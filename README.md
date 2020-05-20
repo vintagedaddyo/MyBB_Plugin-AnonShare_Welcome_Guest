@@ -17,27 +17,7 @@ Upload The Files, And Go to Admin CP And Active IT!
 https://github.com/vintagedaddyo/MyBB-Theme-iGame/tree/master/FA4
 
 
-Edit game template: header_welcomeblock_guest
-
-Find:
-[code]
-<div class="buttonwrap">
-<span style="color:white;"><strong>Not a member yet? Why not Sign up today </strong></span>
-<br />
-<a class="button login" href="{$mybb->settings['bburl']}/member.php?action=login" onclick="$('#quick_login').modal({ fadeDuration: 250, keepelement: true }); return false;"><font color="white"><i style="font-size: 16px;" class="fa fa-check-circle-o fa-fw"></i> {$lang->welcome_login}</font></a> 
-
-<a class="button2 register" href="{$mybb->settings['bburl']}/member.php?action=register"><font color="white"><i style="font-size: 16px;" class="fa fa-plus-circle fa-fw"></i>  {$lang->welcome_register} &nbsp;</font></a></div>
-[/code]
-Remove or comment out like so:
-[code]
-<!--<div class="buttonwrap">
-<span style="color:white;"><strong>Not a member yet? Why not Sign up today </strong></span>
-<br />
-<a class="button login" href="{$mybb->settings['bburl']}/member.php?action=login" onclick="$('#quick_login').modal({ fadeDuration: 250, keepelement: true }); return false;"><font color="white"><i style="font-size: 16px;" class="fa fa-check-circle-o fa-fw"></i> {$lang->welcome_login}</font></a> 
-
-<a class="button2 register" href="{$mybb->settings['bburl']}/member.php?action=register"><font color="white"><i style="font-size: 16px;" class="fa fa-plus-circle fa-fw"></i>  {$lang->welcome_register} &nbsp;</font></a></div>
--->
-[/code]
+Specific installation instructions for that theme in regards to this plugin can be found here: https://github.com/vintagedaddyo/MyBB_Plugin-AnonShare_Welcome_Guest/blob/master/Documentation/readme.txt
 
 After installing and editing that theme, then install the plugin
 
