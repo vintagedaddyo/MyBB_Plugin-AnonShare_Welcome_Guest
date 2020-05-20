@@ -298,7 +298,7 @@ function anonshare_welcomeguest()
 
             <li>' . $lang->anonshare_welcomeguest_browse . '<span class="anonshare_welcome_stats">' . $stats['numposts'] . '</span>' . $lang->anonshare_welcomeguest_posts . '</li>
 
-            <li>' . $lang->anonshare_welcomeguest_newest_user . '<span class="anonshare_welcome_stats">' . $stats['newest_user'] . '</span></li>            
+            <li>' . $lang->anonshare_welcomeguest_newest_user . '<span class="anonshare_welcome_stats">' . $stats['newest_user'] . '</span></li><br />            
         </ul>
      </div>
     <br />
