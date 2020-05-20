@@ -8,12 +8,9 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.1
+ * Plugin Version: 1.2
  * 
  */
-
-
-// anonshare_welcomeguest_lang_setting
 
 $l['anonshare_welcomeguest_hello']='Welcome to Anonshare!';
 
@@ -30,6 +27,8 @@ $l['anonshare_welcomeguest_topics']=' topics.';
 $l['anonshare_welcomeguest_browse']='Browse through: ';
 
 $l['anonshare_welcomeguest_posts']=' posts.';
+
+$l['anonshare_welcomeguest_newest_user']='Please welcome our newest member, ';
 
 $l['anonshare_welcomeguest_createacct']='Create an account';
 

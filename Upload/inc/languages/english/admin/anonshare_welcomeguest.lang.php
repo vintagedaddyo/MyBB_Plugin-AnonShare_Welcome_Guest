@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.1
+ * Plugin Version: 1.2
  * 
  */
 
@@ -19,7 +19,7 @@ $l['anonshare_welcomeguest_Desc'] = 'Shows a welcome box to AnonShare guests on 
 $l['anonshare_welcomeguest_Web'] = 'http://community.mybb.com/user-6029.html';
 $l['anonshare_welcomeguest_Auth'] = 'Vintagedaddyo';
 $l['anonshare_welcomeguest_AuthSite'] = 'http://community.mybb.com/user-6029.html';
-$l['anonshare_welcomeguest_Ver'] = '1.1';
+$l['anonshare_welcomeguest_Ver'] = '1.2';
 $l['anonshare_welcomeguest_GUID'] = '';
 $l['anonshare_welcomeguest_Compat'] = '18*';
 

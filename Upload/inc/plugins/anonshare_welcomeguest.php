@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.1
+ * Plugin Version: 1.2
  *
  * 
  */
@@ -19,8 +19,6 @@ if (!defined("IN_MYBB"))
   {
     die("Direct initialization of this file is not allowed.<br /><br />Please make sure IN_MYBB is defined.");
   }
-
-$plugins->add_hook('global_start', 'anonshare_welcomeguest');
 
 $plugins->add_hook('index_start', 'anonshare_welcomeguest');
 
@@ -83,6 +81,10 @@ function anonshare_welcomeguest_activate()
 }
 
 .anonshare_welcome_stats {
+	color: #3f9889;
+}
+
+.anonshare_welcome_stats a {
 	color: #3f9889;
 }
 
@@ -247,6 +249,20 @@ function anonshare_welcomeguest_lang()
     $lang->load("anonshare_welcomeguest");
   }
 
+function anonshare_welcomeguest_global()
+  {
+
+        global $mybb, $stats, $theme, $cache; 
+
+   // start stats global for welcome
+
+    $stats = $cache->read("stats");
+    $stats['newest_user'] = build_profile_link($stats['lastusername'], $stats['lastuid']);
+    $total_posts = my_number_format($stats['numposts']);
+    $total_users = my_number_format($stats['numusers']);
+
+  }
+
 function anonshare_welcomeguest()
   {
     
@@ -258,7 +274,8 @@ function anonshare_welcomeguest()
         
         
         anonshare_welcomeguest_lang();
-        
+        anonshare_welcomeguest_global();
+
         $anonshare_welcomeguest = '
 		<table border="0" cellspacing="' . $theme['borderwidth'] . '" cellpadding="' . $theme['tablespace'] . '" class="tborder">
 	<thead>
@@ -274,8 +291,11 @@ function anonshare_welcomeguest()
 		<div class="anonshare_welcome_msg float_left"><h1>' . $lang->anonshare_welcomeguest_shout . '</h1>
  ' . $lang->anonshare_welcomeguest_create . '
         <ul>
-            <li>' . $lang->anonshare_welcomeguest_discuss . ' <span class="anonshare_welcome_stats">' . $stats['numusers'] . '</span> ' . $lang->anonshare_welcomeguest_othermembers . '<span class="anonshare_welcome_stats">' . $stats['numthreads'] . '</span>' . $lang->anonshare_welcomeguest_topics . '</li>
+            <li>' . $lang->anonshare_welcomeguest_discuss . ' <span class="anonshare_welcome_stats"><a href="' . $mybb->settings['bburl'] . '/memberlist.php">' . $stats['numusers'] . '</a></span> ' . $lang->anonshare_welcomeguest_othermembers . '<span class="anonshare_welcome_stats">' . $stats['numthreads'] . '</span>' . $lang->anonshare_welcomeguest_topics . '</li>
+
             <li>' . $lang->anonshare_welcomeguest_browse . '<span class="anonshare_welcome_stats">' . $stats['numposts'] . '</span>' . $lang->anonshare_welcomeguest_posts . '</li>
+
+            <li>' . $lang->anonshare_welcomeguest_newest_user . '<span class="anonshare_welcome_stats">' . $stats['newest_user'] . '</span></li>            
         </ul>
      </div>
     <br />
