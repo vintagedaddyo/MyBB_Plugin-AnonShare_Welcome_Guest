@@ -16,6 +16,10 @@ $l['anonshare_welcomeguest_hello']='Welcome to Anonshare!';
 
 $l['anonshare_welcomeguest_shout']='Greetings, Guest...';
 
+$l['anonshare_welcomeguest_message']='If this is your first visit, be sure to check out the <span class="anonshare_welcome_stats"><a href="misc.php?action=help"><strong>Help/FAQ</strong></a></span>.
+You may have to register before you can post and you can simply click the register link below to do so.
+To start viewing threads and posts, select the forum that you want to visit from the forums below.';
+
 $l['anonshare_welcomeguest_create']='Create a free account today and:';
 
 $l['anonshare_welcomeguest_discuss']='Discuss with: ';

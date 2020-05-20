@@ -289,6 +289,9 @@ function anonshare_welcomeguest()
 		<tr>
 			<td class="trow1 anonshare_welcome_body">
 		<div class="anonshare_welcome_msg float_left"><h1>' . $lang->anonshare_welcomeguest_shout . '</h1>
+
+' . $lang->anonshare_welcomeguest_message . '<br />
+<br />
  ' . $lang->anonshare_welcomeguest_create . '
         <ul>
             <li>' . $lang->anonshare_welcomeguest_discuss . ' <span class="anonshare_welcome_stats"><a href="' . $mybb->settings['bburl'] . '/memberlist.php">' . $stats['numusers'] . '</a></span> ' . $lang->anonshare_welcomeguest_othermembers . '<span class="anonshare_welcome_stats">' . $stats['numthreads'] . '</span>' . $lang->anonshare_welcomeguest_topics . '</li>
